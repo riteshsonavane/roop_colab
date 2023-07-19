@@ -6,7 +6,7 @@ Disclaimer: The "Roop" face swapping application is provided for entertainment p
 Run one-click face swapping online using Google's free GPU with Colab. [Click here](roop_colab.ipynb) to open it!
 
 ## Demo
-![source](source.jpeg)
+![source](source.jpg)
 ![target](target.jpeg)
 ![Result](out.jpg)
 

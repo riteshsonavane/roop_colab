@@ -1,24 +1,16 @@
-# Roop项目的Colab脚本
-使用谷歌免费的GPU在线运行一键换脸，[点击打开](roop_v1.ipynb)！  
+# Roop Face Swapping Colab Version
+Disclaimer
+Disclaimer: The "Roop" face swapping application is provided for entertainment purposes only. Users are responsible for obtaining proper consent and permissions before using the application to swap faces in images or videos. The accuracy of results may vary based on various factors. The application should not be used for deceptive, defamatory, explicit, or unethical purposes. We do not guarantee flawless results and disclaim any liability for any misinterpretation or consequences resulting from the use of this application. Users are solely responsible for complying with applicable laws and respecting others' rights. Use the "Roop" application at your own risk.
 
-![demo](4.jpg)   
+# Roop Project's Colab Script
+Run one-click face swapping online using Google's free GPU with Colab. [Click here](roop_colab.ipynb) to open it!
 
-# 更新  
+## Demo
+![source](source.jpeg)
+![target](target.jpeg)
+![Result](out.jpg)
 
-![demo](new.jpg)   
+# Original Project Repository [roop](https://github.com/s0md3v/roop/)
 
-# 原项目地址[roop](https://github.com/s0md3v/roop/)
-![demo-gif](https://github.com/s0md3v/roop/blob/main/demo.gif)  
-
-
-![demo](cmp.gif)  
-
-
-
-  
-# 使用方法
-
-打开.ipynb文件，然后点击open in colab 就可以开始使用了，详细的使用教程，点[这里](https://www.tonyisstark.com/1240.html) 
-
-
-
+# Usage Instructions
+Open the .ipynb file and click "Open in Colab" to start using it.

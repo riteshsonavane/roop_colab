@@ -13,4 +13,12 @@ Run one-click face swapping online using Google's free GPU with Colab. [Click he
 # Original Project Repository [roop](https://github.com/s0md3v/roop/)
 
 # Usage Instructions
-Open the .ipynb file and click "Open in Colab" to start using it.
+Open the .ipynb file and click "Open Notebook in Google Colab" after disclaimer to start using it.
+
+
+## Use files from google drive
+If you need to use files from Google Drive, you can click on this script to mount your Google Drive. This is awesome!"
+```
+from google.colab import drive
+drive.mount('/content/drive')
+```

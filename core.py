@@ -18,7 +18,7 @@ import onnxruntime
 if not 'CUDAExecutionProvider' in onnxruntime.get_available_providers():
     del torch
 import tensorflow
-
+import cv2
 import roop.globals
 import roop.metadata
 import roop.ui as ui
@@ -204,7 +204,8 @@ def create_video_from_frames(frames, fps):
     out.release()
 
 def load_video_in_memoery(video_path):
-    import cv2
+    # only keep one out of skip_frame frames
+    skip_frame = 1
     cap = cv2.VideoCapture(video_path)
     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     print(f"Total frames: {total_frames}")
@@ -215,7 +216,7 @@ def load_video_in_memoery(video_path):
         ret, frame = cap.read()
         # If frame is read successfully, save it
         if ret:
-          if frame_count % 3 == 0:
+          if frame_count % skip_frame == 0:
             frames_tuple.append((frame_index, frame))
             frame_index += 1
           frame_count += 1

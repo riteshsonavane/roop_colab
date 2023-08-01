@@ -48,6 +48,27 @@ def load_video_in_memoery(video_path):
     cap.release()
     return frames
 
+def face_similarity(face_analyser, img1, img2):
+  # how to use
+  # providers = ['CPUExecutionProvider']
+  # app = FaceAnalysis(providers=providers, name='buffalo_l')
+  # app.prepare(ctx_id=0, det_size=(640, 640))
+  # app.prepare(ctx_id=0)
+  # similarity_1 = face_similarity(
+  #     app, 
+  #     cv2.imread('/content/roop_colab/child.png'),
+  #     cv2.imread('/content/roop_colab/father.png')
+  # )
+  # similarity_2 = face_similarity(
+  #     app, 
+  #     cv2.imread('/content/roop_colab/child.png'),
+  #     cv2.imread('/content/roop_colab/mother.png')
+  # )
+  # print(f'father similarity {similarity_1}, mother similarity {similarity_2}') 
+  f1 = face_analyser.get(img1)[0]
+  f2 = face_analyser.get(img2)[0]
+  return np.sum(np.square(f1.normed_embedding - f2.normed_embedding))
+
 if __name__ == '__main__':
     providers = ['CPUExecutionProvider']
     app = FaceAnalysis(providers=providers, name='buffalo_l')
